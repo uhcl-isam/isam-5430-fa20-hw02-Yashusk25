@@ -14,10 +14,10 @@ namespace CSharp.Assignments.Loop1
         {
             
           
-            Console.Error.WriteLine("Enter the starting number {0}",num1);
+            Console.Error.WriteLine("Enter the starting number {0}");
             
             // Codes to enter start
-            Console.Error.WriteLine("Enter the ending number {1}", num2);
+            Console.Error.WriteLine("Enter the ending number {1}");
             
 
             // Codes to enter end.

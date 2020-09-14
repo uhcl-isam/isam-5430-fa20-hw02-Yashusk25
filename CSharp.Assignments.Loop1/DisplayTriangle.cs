@@ -30,7 +30,76 @@ namespace CSharp.Assignments.Loop1
             int n = Convert.ToInt32(Console.ReadLine());
 
             // Write your codes here.
+            int row, col;
+            //Console.WriteLine("Enter a number \n");
+            //int value = Convert.ToInt32(Console.ReadLine());
+
+
+
+            Console.WriteLine("Pattern a \n");
+            for (row = 1; row <= n; ++row)
+            {
+                /* Iterate through columns to print star */
+                for (col = 1; col <= row; ++col)
+                {
+                    Console.Write("*");
+                }
+                /* Move to next line */
+                Console.WriteLine("");
+            }
+            Console.WriteLine("\nPattern B \n");
+            for (row = n; row >= 1; --row)
+            {
+                /* Iterate through columns to print star */
+                for (col = 1; col <= row; ++col)
+                {
+                    Console.Write("*");
+                }
+                /* Move to next line */
+                Console.WriteLine("");
+            }
+            Console.WriteLine("\nPattern C \n");
+
+            for (row = 1; row <= n; row++)
+            {
+                /* Print leading spaces */
+                for (col = 1; col < row; col++)
+                {
+                    Console.Write(" ");
+                }
+
+                /* Iterate through columns to print star*/
+                for (col = row; col <= n; col++)
+                {
+                    Console.Write("*");
+                }
+
+                /* Move to next line */
+                Console.WriteLine("");
+            }
+
+            Console.WriteLine("\nPattern D \n");
+
+            int k;
+            for (row = 1; row <= n; row++)
+            {
+                for (col = 1; col <= n - row; col++)
+                {
+                    Console.Write(" ");
+                }
+                for (k = 1; k <= row; k++)
+                {
+                    /* Iterate through columns to print star */
+                    Console.Write("*");
+                }
+                /* Move to next line */
+                Console.WriteLine("");
+            }
             Console.ReadLine();
         }
     }
 }
+    
+
+
+
