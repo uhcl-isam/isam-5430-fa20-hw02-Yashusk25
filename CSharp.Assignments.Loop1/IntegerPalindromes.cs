@@ -20,13 +20,21 @@ namespace CSharp.Assignments.Loop1
             // enter sentinel inputs
             // then check the palindrome only once.
             int n, r, sum = 0, temp;
-            Console.Write("Enter the Number: ");
-            n = int.Parse(Console.ReadLine());
-            temp = n;
-            if (n == 9)
+            //Console.Write("Enter the Number: ");
+            string val = Console.ReadLine();
+            //n = Convert.ToInt32(Console.ReadLine());
+            //temp = n;
+            if (val.Length != 9)
+            {
+                Console.WriteLine("Sentinental");
                 return;
-            
-                while (n > 0)
+            }
+            n = int.Parse(val);
+            temp = n;
+
+
+
+            while (n > 0)
                 {
                     r = n % 10;
                     sum = (sum * 10) + r;
