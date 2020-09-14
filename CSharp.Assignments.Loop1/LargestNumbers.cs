@@ -35,7 +35,7 @@ namespace CSharp.Assignments.Loop1
             // write your codes here
             int counter=0;;
             
-            int largest1 =0;
+            int largest1=0;
             int largest2=0;
             int number=0;
 
