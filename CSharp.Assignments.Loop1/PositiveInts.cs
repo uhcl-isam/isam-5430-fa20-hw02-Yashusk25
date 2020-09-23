@@ -11,8 +11,20 @@ namespace CSharp.Assignments.Loop1
         /// </summary>
         public static void Main()
         {
+            int i;
+
             Console.Error.WriteLine("Enter the value of n");
+            int n = Convert.ToInt32(Console.ReadLine());
+            //Convert.ToInt32(Console.ReadLine());
             // write your codes here.
+            //int i,n;
+
+            for ( i=1; i<=n; i++)
+            {
+                Console.WriteLine("{0}",i);
+
+            }
+            Console.WriteLine("\n\n");
         }
     }
 }

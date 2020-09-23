@@ -1,4 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+
+
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -24,6 +33,57 @@ namespace CSharp.Assignments.Loop1
         {
             // get first number and assign it to variable largest
             // write your codes here
+            int counter=0;;
+            
+            int largest1=0;
+            int largest2=0;
+            int number=0;
+
+            for(counter=0; counter < 10; counter++) {
+            Console.WriteLine("Please enter the number");
+                number=Convert.ToInt32(Console.ReadLine());
+
+            
+            
+
+            if(counter==0){
+              largest1=number;
+            
+            }
+
+            else if (counter == 1)
+                {
+                   if(number>largest1)
+                    largest2=number;
+                   else
+                        {
+                      largest2 = largest1;
+                        largest1=number;
+                    }
+            
+            }
+
+            else{
+                  if(number> largest1 && number>largest2)
+                        {
+                          largest1 = largest2;
+                          largest2 = number;
+                    
+                    }
+
+                    else if(number> largest1 && number< largest2)
+                        largest1 = number;
+                
+                
+                }
+
+            
+                
+            }
+            
+            Console.WriteLine("Two largest number enterd was {0}, {1}",largest2, largest1);
+            Console.ReadLine();
+
         }
     }
 }

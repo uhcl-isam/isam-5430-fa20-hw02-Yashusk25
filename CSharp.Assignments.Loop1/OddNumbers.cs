@@ -12,10 +12,16 @@ namespace CSharp.Assignments.Loop1
 
         public static void Main()
         {
-            Console.Error.WriteLine("Enter the starting number");
+            
+          
+            Console.Error.WriteLine("Enter the starting number {0}");
+            
             // Codes to enter start
-            Console.Error.WriteLine("Enter the ending number");
+            Console.Error.WriteLine("Enter the ending number {1}");
+            
+
             // Codes to enter end.
+ 
         }
     }
 }
