@@ -14,7 +14,8 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool CigarParty(int cigars, bool isWeekend)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return cigars >= 40 && (cigars <= 60 || isWeekend);
         }
 
         /// <summary>
@@ -25,7 +26,20 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static int CaughtSpeeding(int speed, bool birthday)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            int birthdayBuffer = birthday ? 5 : 0;
+            if (speed <= 60 + birthdayBuffer)
+            {
+                return 0;
+            }
+            else if (speed > 60 + birthdayBuffer && speed <= 80 + birthdayBuffer)
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
         }
 
         /// <summary>
@@ -36,7 +50,16 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool Love6(int a, int b)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            if (a == 6 || b == 6)
+            {
+                return true;
+            }
+            else if (a + b == 6 || Math.Abs(a - b) == 6)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -78,7 +101,9 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool SquirrelPlay(int temperature, bool isSummer)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            int upperLimit = isSummer ? 100 : 90;
+            return temperature >= 60 && temperature <= upperLimit;
         }
 
         /// <summary>
@@ -95,7 +120,13 @@ namespace CSharp.Assignments.Loop1
         /// <returns>either: "7:00" or "10:00" or "off"</returns>
         public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            //int dayOfWeek=0;
+            if (dayOfWeek == 0 ||dayOfWeek == 6)
+            {
+                return vacation ? "off" : "10:00";
+            }
+            return vacation ? "10:00" : "7:00";
         }
 
 
