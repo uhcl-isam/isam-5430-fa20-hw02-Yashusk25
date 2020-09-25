@@ -157,7 +157,7 @@ namespace CSharp.Assignments.Loop1.Tests
 
         [Test]
         [Category("Selection")]
-        public void AlarmClock()
+        public void  AlarmClock()
         {
             Assert.AreEqual("7:00", Logic1.AlarmClock(DayOfWeek.Monday, false));
             Assert.AreEqual("7:00", Logic1.AlarmClock(DayOfWeek.Friday, false));

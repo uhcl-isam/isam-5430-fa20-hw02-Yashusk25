@@ -120,13 +120,13 @@ namespace CSharp.Assignments.Loop1
         /// <returns>either: "7:00" or "10:00" or "off"</returns>
         public static string AlarmClock(DayOfWeek dayOfWeek, bool vacation)
         {
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
             //int dayOfWeek=0;
-            if (dayOfWeek == 0 ||dayOfWeek == 6)
+            /*if (dayOfWeek == 0 || dayOfWeek == 6)
             {
                 return vacation ? "off" : "10:00";
             }
-            return vacation ? "10:00" : "7:00";
+            return vacation ? "10:00" : "7:00";*/
         }
 
 
@@ -139,7 +139,7 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
         {
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
         }
 
 
