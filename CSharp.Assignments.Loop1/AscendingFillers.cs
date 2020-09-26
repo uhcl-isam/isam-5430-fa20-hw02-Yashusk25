@@ -17,6 +17,153 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // Complete your loop codes here.
+            var test = new AscendingFillers();
+
+            Console.WriteLine("Please enter sequece of integer value");
+
+            var inputValues = Console.ReadLine();
+
+            var parsedIntegerValue = test.ValidateParams(inputValues);
+
+            test.CalculateSequentialValue(parsedIntegerValue);
+
         }
+
+
+
+        private void CalculateSequentialValue(IList<int> inputValues)
+
+        {
+
+            int outputSum = 0;
+
+            for (int i = 0; i < inputValues.Count; i++)
+
+            {
+
+                if ((i + 1) != inputValues.Count && inputValues[i] == inputValues[i + 1])
+
+                {
+
+                    outputSum += 1;
+
+                    inputValues[i + 1] += 1;
+
+                }
+
+                else
+
+                {
+
+                    if ((i + 1) != inputValues.Count)
+
+                    {
+
+                        if (inputValues[i] < inputValues[i + 1])
+
+                        {
+
+                            continue;
+
+                        }
+
+                        else
+
+                        {
+
+                            if (inputValues[i + 1] != 0)
+
+                            {
+
+                                var difference = (inputValues[i] - inputValues[i + 1]) + 1;
+
+                                inputValues[i + 1] += difference;
+
+                                outputSum += difference;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+
+
+            Console.WriteLine($"The output sum {outputSum}");
+
+        }
+
+
+
+        private List<int> ValidateParams(string inputValues)
+
+        {
+
+            if (string.IsNullOrEmpty(inputValues))
+
+            {
+
+                Console.WriteLine($"Input cannot be empty {inputValues}");
+
+               // CloseConsoleApp();
+
+            }
+
+
+
+            var values = inputValues.Split(',');
+
+            var validIntegerValues = new List<int>();
+
+
+
+            foreach (var value in values)
+
+            {
+
+                if (int.TryParse(value, out int parsedIntegerValue))
+
+                {
+
+                    if (parsedIntegerValue < 0)
+
+                    {
+
+                        Console.WriteLine($"Input contains invalid input {values}");
+
+                       // CloseConsoleApp();
+
+                    }
+
+                    else
+
+                    {
+
+                        validIntegerValues.Add(parsedIntegerValue);
+
+                    }
+
+                }
+
+
+
+            }
+
+
+
+            return validIntegerValues;
+
+        }
+
+
+
+       
+
     }
 }
+    
+
